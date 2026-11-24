@@ -2,6 +2,8 @@ import os
 import secrets
 import hmac
 from functools import wraps
+from urllib.parse import urlsplit
+from werkzeug.exceptions import HTTPException
 from pathlib import Path
 from flask import Flask, g, request, session, redirect, url_for, render_template, flash, abort, make_response
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -207,6 +209,25 @@ def create_app(test_config=None):
         favorites = query(playlist_sql + " WHERE p.visibility='public' AND EXISTS(SELECT 1 FROM music.playlist_favorite f WHERE f.playlist_id=p.playlist_id AND f.user_id=$1) ORDER BY p.playlist_id", uid())
         return render_template('profile.html', songs=liked, playlists=favorites)
 
+    def like_return_url():
+        # Only existing song-list pages may be a return target, never an external URL.
+        target = request.form.get('return_path', '')
+        if (target.startswith('/') and not target.startswith('//')
+                and len(target) <= 2048 and '\\' not in target
+                and not any(ord(char) < 32 or ord(char) == 127 for char in target)):
+            parts = urlsplit(target)
+            if not parts.scheme and not parts.netloc and not parts.fragment:
+                try:
+                    endpoint, _ = app.url_map.bind('localhost').match(parts.path, method='GET')
+                except HTTPException:
+                    pass
+                else:
+                    if endpoint in {'library', 'profile', 'discover', 'detail'}:
+                        return target
+        # Keep compatibility with forms rendered before this update.
+        return (url_for('profile') if request.form.get('return_to') == 'profile'
+                else url_for('library', q=request.form.get('q', '')[:150]))
+
     @app.post('/songs/<int:sid>/<action>')
     @login_required
     def like(sid, action):
@@ -217,7 +238,7 @@ def create_app(test_config=None):
             query('INSERT INTO music.song_like(user_id,song_id) SELECT $1,$2 WHERE NOT EXISTS(SELECT 1 FROM music.song_like WHERE user_id=$1 AND song_id=$2)', uid(), sid)
         else:
             query('DELETE FROM music.song_like WHERE user_id=$1 AND song_id=$2', uid(), sid)
-        return redirect(url_for('profile') if request.form.get('return_to') == 'profile' else url_for('library', q=request.form.get('q', '')[:150]))
+        return redirect(like_return_url())
 
     @app.get('/playlists')
     def public_playlists():

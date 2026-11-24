@@ -132,12 +132,20 @@
       const samePage=new URL(response.url,location.href).pathname===location.pathname;
       const keepPosition=options.method==='POST' && samePage;
       const position=keepPosition?{left:window.scrollX,top:window.scrollY}:{left:0,top:0};
+      const expanded=keepPosition?Array.from(old.querySelectorAll('details'),item=>item.open):[];
+      const focusedSong=keepPosition && document.activeElement?.classList.contains('like')
+        ? document.activeElement.closest('.song-row')?.dataset.songId : null;
+      if(keepPosition)next.querySelectorAll('details').forEach((item,i)=>{
+        if(i<expanded.length)item.open=expanded[i];
+      });
       old.replaceWith(next);document.title=documentNext.title;
       if(historyMode==='push' && keepPosition)history.replaceState({},'',response.url);
       else if(historyMode==='push')history.pushState({},'',response.url);
       else if(historyMode==='replace')history.replaceState({},'',response.url);
       window.scrollTo({...position,behavior:'instant'});markTrack();
-      const main=document.querySelector('main');main.setAttribute('tabindex','-1');main.focus({preventScroll:true});
+      const main=document.querySelector('main');main.setAttribute('tabindex','-1');
+      const focusTarget=focusedSong?document.querySelector(`.song-row[data-song-id="${focusedSong}"] .like`):null;
+      (focusTarget || main).focus({preventScroll:true});
       navStatus.hidden=true;
     } catch {
       if(current===navigation){navStatus.hidden=false;navStatus.textContent='页面加载失败，当前播放已保留。请检查连接后重试。';}
