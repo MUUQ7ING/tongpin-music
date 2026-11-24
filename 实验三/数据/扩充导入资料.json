@@ -1,0 +1,425 @@
+[
+  {
+    "title": "Shelter",
+    "artists": [
+      "Porter Robinson",
+      "Madeon"
+    ],
+    "album": "Shelter",
+    "category": "旋律电子与情绪舞曲",
+    "existing_song_id": 2,
+    "duration_seconds": 240,
+    "genre": "Electronic",
+    "source": "现有曲库，保留原实验资料"
+  },
+  {
+    "title": "Sad Machine",
+    "artists": [
+      "Porter Robinson"
+    ],
+    "album": "Worlds",
+    "category": "旋律电子与情绪舞曲",
+    "duration_seconds": 350,
+    "genre": "Dance",
+    "source": "https://music.apple.com/us/album/sad-machine/1440857923?i=1440858256&uo=4",
+    "reference_title": "Sad Machine",
+    "reference_artist": "Porter Robinson",
+    "reference_album": "Worlds"
+  },
+  {
+    "title": "Look at the Sky",
+    "artists": [
+      "Porter Robinson"
+    ],
+    "album": "Nurture",
+    "category": "旋律电子与情绪舞曲",
+    "existing_song_id": 1,
+    "duration_seconds": 210,
+    "genre": "Electronic",
+    "source": "现有曲库，保留原实验资料"
+  },
+  {
+    "title": "Marea (we’ve lost dancing)",
+    "artists": [
+      "Fred again..",
+      "The Blessed Madonna"
+    ],
+    "album": "Actual Life (April 14 - December 17 2020)",
+    "category": "旋律电子与情绪舞曲",
+    "duration_seconds": 285,
+    "genre": "Electronic",
+    "source": "https://music.apple.com/us/album/marea-weve-lost-dancing/1553064273?i=1553064274&uo=4",
+    "reference_title": "Marea (We’ve Lost Dancing)",
+    "reference_artist": "Fred again.. & The Blessed Madonna",
+    "reference_album": "Marea (We’ve Lost Dancing) - Single"
+  },
+  {
+    "title": "Never Be Like You",
+    "artists": [
+      "Flume",
+      "Kai"
+    ],
+    "album": "Never Be Like You",
+    "category": "旋律电子与情绪舞曲",
+    "duration_seconds": 235,
+    "genre": "Electronic",
+    "source": "https://music.apple.com/us/album/never-be-like-you-feat-kai/1881366662?i=1881366664&uo=4",
+    "reference_title": "Never Be Like You (feat. Kai)",
+    "reference_artist": "Flume",
+    "reference_album": "Never Be Like You (feat. Kai) - Single"
+  },
+  {
+    "title": "Rush Over Me",
+    "artists": [
+      "Seven Lions",
+      "Said The Sky",
+      "ILLENIUM",
+      "HALIENE"
+    ],
+    "album": "Rush Over Me",
+    "category": "旋律电子与情绪舞曲",
+    "duration_seconds": 259,
+    "genre": "Electronic",
+    "source": "https://music.apple.com/us/album/rush-over-me/1700478964?i=1700478965&uo=4",
+    "reference_title": "Rush over Me",
+    "reference_artist": "Seven Lions, ILLENIUM, Said The Sky & HALIENE",
+    "reference_album": "Rush over Me - Single"
+  },
+  {
+    "title": "Light",
+    "artists": [
+      "San Holo"
+    ],
+    "album": "Light",
+    "category": "旋律电子与情绪舞曲",
+    "duration_seconds": 239,
+    "genre": "Dance",
+    "source": "https://music.apple.com/us/album/light/1202253898?i=1202254004&uo=4",
+    "reference_title": "Light",
+    "reference_artist": "San Holo",
+    "reference_album": "Light - Single"
+  },
+  {
+    "title": "Wake Me Up",
+    "artists": [
+      "Avicii",
+      "Aloe Blacc"
+    ],
+    "album": "True (Bonus Edition)",
+    "category": "旋律电子与情绪舞曲",
+    "duration_seconds": 249,
+    "genre": "House",
+    "source": "https://music.apple.com/us/album/wake-me-up/1440872730?i=1440872929&uo=4",
+    "reference_title": "Wake Me Up",
+    "reference_artist": "Avicii",
+    "reference_album": "True",
+    "note": "专辑名称沿用用户清单；时长参考同曲正式录音条目，未精确核对该合辑/版本母带。"
+  },
+  {
+    "title": "Harder, Better, Faster, Stronger",
+    "artists": [
+      "Daft Punk"
+    ],
+    "album": "Harder, Better, Faster, Stronger",
+    "category": "经典电子与先锋流行",
+    "duration_seconds": 226,
+    "genre": "Dance",
+    "source": "https://music.apple.com/us/album/harder-better-faster-stronger/696783048?i=696783319&uo=4",
+    "reference_title": "Harder Better Faster Stronger",
+    "reference_artist": "Daft Punk",
+    "reference_album": "Harder Better Faster Stronger - EP"
+  },
+  {
+    "title": "Strobe",
+    "artists": [
+      "deadmau5"
+    ],
+    "album": "Strobe",
+    "category": "经典电子与先锋流行",
+    "duration_seconds": 637,
+    "genre": "Electronic",
+    "source": "https://music.apple.com/us/album/strobe/1817426847?i=1817427287&uo=4",
+    "reference_title": "Strobe",
+    "reference_artist": "deadmau5",
+    "reference_album": "Strobe - Single"
+  },
+  {
+    "title": "Xtal",
+    "artists": [
+      "Aphex Twin"
+    ],
+    "album": "Selected Ambient Works 85-92",
+    "category": "经典电子与先锋流行",
+    "duration_seconds": 293,
+    "genre": "Electronic",
+    "source": "https://music.apple.com/us/album/xtal/1668862636?i=1668862649&uo=4",
+    "reference_title": "Xtal",
+    "reference_artist": "Aphex Twin",
+    "reference_album": "Selected Ambient Works 85-92"
+  },
+  {
+    "title": "360",
+    "artists": [
+      "Charli xcx"
+    ],
+    "album": "BRAT",
+    "category": "经典电子与先锋流行",
+    "duration_seconds": 133,
+    "genre": "Dance",
+    "source": "https://music.apple.com/us/album/360/1762679425?i=1762679426&uo=4",
+    "reference_title": "360",
+    "reference_artist": "Charli xcx",
+    "reference_album": "360 - Single",
+    "note": "专辑名称沿用用户清单；时长参考同曲正式录音条目，未精确核对该合辑/版本母带。"
+  },
+  {
+    "title": "Image",
+    "artists": [
+      "Magdalena Bay"
+    ],
+    "album": "Imaginal Disk",
+    "category": "经典电子与先锋流行",
+    "duration_seconds": 212,
+    "genre": "Indie Pop",
+    "source": "https://music.apple.com/us/album/image/1751414757?i=1751414761&uo=4",
+    "reference_title": "Image",
+    "reference_artist": "Magdalena Bay",
+    "reference_album": "Imaginal Disk"
+  },
+  {
+    "title": "新宝島",
+    "artists": [
+      "サカナクション（鱼韵）"
+    ],
+    "album": "834.194",
+    "category": "日系摇滚与电子流行",
+    "existing_song_id": 4,
+    "duration_seconds": 230,
+    "genre": "Rock",
+    "source": "现有曲库，保留原实验资料"
+  },
+  {
+    "title": "夜の踊り子",
+    "artists": [
+      "サカナクション（鱼韵）"
+    ],
+    "album": "sakanaction",
+    "category": "日系摇滚与电子流行",
+    "duration_seconds": 302,
+    "genre": "Rock",
+    "source": "https://music.apple.com/jp/album/%E5%A4%9C%E3%81%AE%E8%B8%8A%E3%82%8A%E5%AD%90/604748196?i=604748203&uo=4",
+    "reference_title": "夜の踊り子",
+    "reference_artist": "サカナクション",
+    "reference_album": "sakanaction"
+  },
+  {
+    "title": "だから僕は音楽を辞めた",
+    "artists": [
+      "ヨルシカ（夜鹿）"
+    ],
+    "album": "だから僕は音楽を辞めた",
+    "category": "日系摇滚与电子流行",
+    "duration_seconds": 242,
+    "genre": "Rock",
+    "source": "https://music.apple.com/jp/album/%E3%81%A0%E3%81%8B%E3%82%89%E5%83%95%E3%81%AF%E9%9F%B3%E6%A5%BD%E3%82%92%E8%BE%9E%E3%82%81%E3%81%9F/1648876058?i=1648877323&uo=4",
+    "reference_title": "だから僕は音楽を辞めた",
+    "reference_artist": "ヨルシカ",
+    "reference_album": "だから僕は音楽を辞めた"
+  },
+  {
+    "title": "花に亡霊",
+    "artists": [
+      "ヨルシカ（夜鹿）"
+    ],
+    "album": "花に亡霊",
+    "category": "日系摇滚与电子流行",
+    "duration_seconds": 240,
+    "genre": "J-Pop",
+    "source": "https://music.apple.com/jp/album/%E8%8A%B1%E3%81%AB%E4%BA%A1%E9%9C%8A/1506849808?i=1506849814&uo=4",
+    "reference_title": "花に亡霊",
+    "reference_artist": "ヨルシカ",
+    "reference_album": "花に亡霊 - Single"
+  },
+  {
+    "title": "Beautiful World",
+    "artists": [
+      "宇多田ヒカル"
+    ],
+    "album": "Beautiful World / Kiss & Cry",
+    "category": "日系摇滚与电子流行",
+    "duration_seconds": 314,
+    "genre": "J-Pop",
+    "source": "https://music.apple.com/jp/album/beautiful-world/1445033366?i=1445033374&uo=4",
+    "reference_title": "Beautiful World",
+    "reference_artist": "宇多田ヒカル",
+    "reference_album": "Beautiful World / Kiss & Cry - EP"
+  },
+  {
+    "title": "丸の内サディスティック",
+    "artists": [
+      "椎名林檎"
+    ],
+    "album": "MoRA",
+    "category": "日系摇滚与电子流行",
+    "duration_seconds": 235,
+    "genre": "J-Pop",
+    "source": "https://music.apple.com/jp/album/%E4%B8%B8%E3%83%8E%E5%86%85%E3%82%B5%E3%83%87%E3%82%A3%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF/1384341676?i=1384341683&uo=4",
+    "reference_title": "丸ノ内サディスティック",
+    "reference_artist": "椎名林檎",
+    "reference_album": "無罪モラトリアム",
+    "note": "专辑名称沿用用户清单；时长参考同曲正式录音条目，未精确核对该合辑/版本母带。"
+  },
+  {
+    "title": "青と夏",
+    "artists": [
+      "Mrs. GREEN APPLE"
+    ],
+    "album": "青と夏",
+    "category": "日系摇滚与电子流行",
+    "duration_seconds": 270,
+    "genre": "Rock",
+    "source": "https://music.apple.com/jp/album/%E9%9D%92%E3%81%A8%E5%A4%8F/1408505088?i=1408505264&uo=4",
+    "reference_title": "青と夏",
+    "reference_artist": "Mrs. GREEN APPLE",
+    "reference_album": "青と夏 - EP"
+  },
+  {
+    "title": "ローリンガール",
+    "artists": [
+      "wowaka",
+      "初音ミク"
+    ],
+    "album": "Unhappy Refrain",
+    "category": "术力口 / 二次元乐队与 ACG 经典",
+    "duration_seconds": 190,
+    "genre": "Rock",
+    "source": "https://musicbrainz.org/release/1b1de840-b0d1-4def-9fb5-929b13dca10c",
+    "reference_album": "Unhappy Refrain",
+    "note": "选用专辑版本 3:10，不使用原投稿视频时长。"
+  },
+  {
+    "title": "アスノヨゾラ哨戒班",
+    "artists": [
+      "Orangestar",
+      "IA"
+    ],
+    "album": "未完成エイトビーツ",
+    "category": "术力口 / 二次元乐队与 ACG 经典",
+    "duration_seconds": 177,
+    "genre": "Anime",
+    "source": "https://music.apple.com/jp/album/%E3%82%A2%E3%82%B9%E3%83%8E%E3%83%A8%E3%82%BE%E3%83%A9%E5%93%A8%E6%88%92%E7%8F%AD/987797310?i=987797442&uo=4",
+    "reference_title": "アスノヨゾラ哨戒班",
+    "reference_artist": "Orangestar",
+    "reference_album": "未完成エイトビーツ"
+  },
+  {
+    "title": "青春コンプレックス",
+    "artists": [
+      "結束バンド"
+    ],
+    "album": "青春コンプレックス",
+    "category": "术力口 / 二次元乐队与 ACG 经典",
+    "duration_seconds": 205,
+    "genre": "Anime",
+    "source": "https://music.apple.com/jp/album/%E9%9D%92%E6%98%A5%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9/1646020667?i=1646020675&uo=4",
+    "reference_title": "青春コンプレックス",
+    "reference_artist": "結束バンド",
+    "reference_album": "青春コンプレックス - EP"
+  },
+  {
+    "title": "God knows...",
+    "artists": [
+      "平野綾"
+    ],
+    "album": "Imaginary ENOZ featuring HARUHI",
+    "category": "术力口 / 二次元乐队与 ACG 经典",
+    "duration_seconds": 279,
+    "genre": "Anime",
+    "source": "https://music.apple.com/jp/album/god-knows/1880587441?i=1880587625&uo=4",
+    "reference_title": "God knows...",
+    "reference_artist": "涼宮ハルヒ(CV.平野綾)",
+    "reference_album": "Imaginary ENOZ featuring HARUHI - EP"
+  },
+  {
+    "title": "I Really Want to Stay at Your House",
+    "artists": [
+      "Rosa Walton",
+      "Hallie Coggins"
+    ],
+    "album": "Cyberpunk 2077: Radio, Vol. 2 (Original Soundtrack)",
+    "category": "术力口 / 二次元乐队与 ACG 经典",
+    "duration_seconds": 246,
+    "genre": "Soundtrack",
+    "source": "https://music.apple.com/us/album/i-really-want-to-stay-at-your-house/1540792622?i=1540793097&uo=4",
+    "reference_title": "I Really Want to Stay at Your House",
+    "reference_artist": "Rosa Walton & Hallie Coggins",
+    "reference_album": "Cyberpunk 2077: Radio, Vol. 2 (Original Soundtrack)"
+  },
+  {
+    "title": "Idioteque",
+    "artists": [
+      "Radiohead"
+    ],
+    "album": "Kid A",
+    "category": "独立摇滚、另类与华语精选",
+    "duration_seconds": 309,
+    "genre": "Alternative",
+    "source": "https://music.apple.com/us/album/idioteque/1097862870?i=1097863262&uo=4",
+    "reference_title": "Idioteque",
+    "reference_artist": "Radiohead",
+    "reference_album": "Kid A"
+  },
+  {
+    "title": "Blue Monday",
+    "artists": [
+      "New Order"
+    ],
+    "album": "International",
+    "category": "独立摇滚、另类与华语精选",
+    "duration_seconds": 449,
+    "genre": "Electronic",
+    "source": "https://music.apple.com/us/album/blue-monday/1530256325?i=1530256511&uo=4",
+    "reference_title": "Blue Monday",
+    "reference_artist": "New Order",
+    "reference_album": "Substance",
+    "note": "专辑名称沿用用户清单；时长参考同曲正式录音条目，未精确核对该合辑/版本母带。"
+  },
+  {
+    "title": "Duvet",
+    "artists": [
+      "Bôa"
+    ],
+    "album": "Twilight",
+    "category": "独立摇滚、另类与华语精选",
+    "duration_seconds": 203,
+    "genre": "Indie Pop",
+    "source": "https://music.apple.com/us/album/duvet/1596227761?i=1596227762&uo=4",
+    "reference_title": "Duvet",
+    "reference_artist": "bôa",
+    "reference_album": "Twilight"
+  },
+  {
+    "title": "地球上最后一个EMO男孩",
+    "artists": [
+      "Chinese Football"
+    ],
+    "album": "Chinese Football",
+    "category": "独立摇滚、另类与华语精选",
+    "duration_seconds": 347,
+    "genre": "Alternative",
+    "source": "https://chinesefootball.bandcamp.com/album/chinese-football",
+    "reference_album": "Chinese Football"
+  },
+  {
+    "title": "黑色柳丁",
+    "artists": [
+      "陶喆"
+    ],
+    "album": "黑色柳丁",
+    "category": "独立摇滚、另类与华语精选",
+    "duration_seconds": 255,
+    "genre": "Pop",
+    "source": "https://musicbrainz.org/release/bade1adc-6282-427e-802d-b523ab3ad434",
+    "reference_album": "黑色柳丁"
+  }
+]

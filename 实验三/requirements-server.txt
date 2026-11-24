@@ -1,0 +1,5 @@
+# ECS uses an isolated CPython 3.12 environment, independent of system Python 3.7.
+Flask==3.1.3
+Werkzeug==3.1.9
+py-opengauss==1.3.11
+gunicorn==27.0.1

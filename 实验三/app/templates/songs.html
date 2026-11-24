@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% from 'macros.html' import song_table,token with context %}{% block content %}<section class="hero"><div><span class="eyebrow">YOUR NEXT FAVORITE</span><h1>每一种心情，<br>都有它的旋律。</h1><p>从一首喜欢的歌出发，遇见新的歌单和同频的人。</p><a class="button" href="{{ url_for('public_playlists') }}">去歌单广场</a></div><div class="hero-art" aria-hidden="true"><div class="vinyl"><div class="vinyl-label">同频<br><small>SIDE A · MUSIC</small></div></div><span class="music-stamp">LET THE MUSIC<br>BRING US TOGETHER</span></div></section><div class="section-heading"><div><span class="eyebrow">THE COLLECTION</span><h2>发现音乐</h2></div><form class="search" method="get"><label class="sr-only" for="q">搜索歌曲、音乐人或专辑</label><input id="q" name="q" value="{{ search }}" placeholder="歌曲、音乐人、专辑" maxlength="150"><button>搜索</button></form></div><p class="muted">{{ songs|length }} 首歌曲 · 合作音乐人一并展示，单曲也有自己的位置</p>{{ song_table(songs, add_to_playlist=true) }}{% if me %}
+<dialog id="playlist-picker" class="playlist-picker" aria-labelledby="playlist-picker-title">
+<div class="picker-heading"><h2 id="playlist-picker-title">添加到我的歌单</h2><button type="button" class="text" data-close-picker aria-label="关闭歌单选择">关闭</button></div>
+<p id="playlist-picker-song" class="picker-song"></p>
+{% if own_playlists %}
+<form id="playlist-picker-form" method="post" class="stack">
+{{ token() }}<input type="hidden" name="song_id"><input type="hidden" name="return_to" value="library"><input type="hidden" name="q" value="{{ search }}">
+<label>选择自己创建的歌单<select id="playlist-picker-select" required><option value="">请选择歌单</option>{% for p in own_playlists %}<option value="{{ p.playlist_id }}" data-name="{{ p.playlist_name }}" data-visibility="{{ p.visibility }}" data-action="{{ url_for('add_song',pid=p.playlist_id) }}" data-songs='{{ p.song_ids|tojson }}'>{{ p.playlist_name }} · {{ '私密' if p.visibility=='private' else '公开' }}</option>{% endfor %}</select></label>
+<p id="playlist-picker-hint" class="muted" role="status">只显示你自己创建的歌单。</p><div class="picker-actions"><button id="playlist-picker-submit" disabled>确认添加</button><button class="secondary" type="button" data-close-picker>取消</button></div>
+</form>
+{% else %}<p class="muted">你还没有创建歌单，先建一张，再把喜欢的歌曲放进去。</p><a class="button" href="{{ url_for('my_playlists') }}">去创建歌单</a>{% endif %}
+</dialog>
+{% endif %}{% endblock %}

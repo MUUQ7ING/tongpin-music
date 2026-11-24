@@ -1,0 +1,23 @@
+{% extends 'base.html' %}{% from 'macros.html' import token with context %}
+{% block content %}
+<span class="eyebrow">BUILD THE COLLECTION</span><h1>曲库管理</h1>
+<p class="muted">录入音乐资料，上传已有歌曲的音频，让喜欢的声音真正响起来。</p>
+<details class="panel" id="create-song"><summary>新增一首歌曲</summary>
+<form method="post" action="{{ url_for('catalog.create_song') }}" enctype="multipart/form-data" class="stack catalog-form">
+{{ token() }}
+<div class="form-grid"><label>歌曲名称<input name="song_title" required maxlength="150" placeholder="保留原文歌名"></label><label>曲风<input name="genre" required maxlength="40" placeholder="例如 Electronic、Rock、Pop"></label></div>
+<label>已有音乐人（可多选）<select name="artist_ids" multiple size="6">{% for artist in artists %}<option value="{{ artist.artist_id }}">{{ artist.artist_name }} · {{ '乐队' if artist.artist_type=='band' else '个人' }}</option>{% endfor %}</select><span class="muted">按住 Command / Ctrl 多选；也可以只填写下面的新音乐人。</span></label>
+<fieldset class="artist-editor"><legend>新增音乐人</legend><div id="artist-fields"><div class="form-grid"><label>音乐人名称<input name="artist_name" maxlength="100" placeholder="不需要新增时留空"></label><label>类型<select name="artist_type"><option value="solo">个人</option><option value="band">乐队</option></select></label></div></div><button type="button" class="secondary small" data-add-artist>再加一位合作音乐人</button></fieldset>
+<div class="form-grid"><label>已有专辑<select name="album_id"><option value="">独立单曲 / 新建专辑</option>{% for album in albums %}<option value="{{ album.album_id }}">{{ album.album_title }}</option>{% endfor %}</select></label><label>新专辑名称<input name="new_album_title" maxlength="150" placeholder="留空表示不新建专辑"></label></div>
+<label>音频文件（可选）<input type="file" name="audio" accept=".mp3,.wav,.flac,.ogg,.m4a"><span class="muted">支持 MP3、WAV、FLAC、OGG、M4A，最大 100 MB；上传后自动读取时长。</span></label>
+<label>时长（秒；无音频时必填）<input name="duration_seconds" type="number" min="1" max="86400" placeholder="例如 240"></label>
+<div class="form-grid"><label>原文歌词（可选）<input type="file" name="lyrics" accept=".lrc"></label><label>中文翻译（可选）<input type="file" name="translation" accept=".lrc"></label></div><p class="muted">逐行同步 LRC，每份不超过 1 MB；上传翻译前需要有原文歌词。</p><button>保存歌曲资料</button><p class="form-status muted" role="status"></p>
+</form></details>
+<div class="section-heading"><h2>音频与歌曲关联</h2><form class="search" method="get"><label class="sr-only" for="q">搜索歌曲、音乐人或专辑</label><input id="q" name="q" value="{{ search }}" placeholder="按歌名或音乐人查找"><button>搜索</button></form></div>
+<p class="muted">{{ songs|length }} 首 · 上传到对应歌曲即可播放；替换音频会保留歌曲编号、喜欢和歌单收录关系。</p>
+<div class="catalog-list">{% for s in songs %}<section class="panel catalog-item"><div class="catalog-item-heading"><div><h3>{{ s.song_title }}</h3><p class="muted">{{ s.artists }} · {{ s.album_title }}</p></div><span class="audio-badge {{ 'ready' if s.has_audio }}">{{ '可播放' if s.has_audio else '待上传音频' }}</span></div>
+{% if s.has_audio %}<p class="file-caption">{{ s.audio_name }} · {{ duration(s.duration_seconds) }}</p>{% endif %}
+<form method="post" action="{{ url_for('catalog.upload_audio',sid=s.song_id) }}" enctype="multipart/form-data" class="upload-form">{{ token() }}<label>为「{{ s.song_title }}」选择音频<input type="file" name="audio" required accept=".mp3,.wav,.flac,.ogg,.m4a"></label><button>{{ '替换音频' if s.has_audio else '上传并绑定' }}</button><span class="form-status muted" role="status"></span></form>
+<details class="lyrics-upload"><summary>{{ '替换或移除歌词' if s.has_lyrics else '添加同步歌词' }}</summary><form method="post" action="{{ url_for('catalog.upload_lyrics',sid=s.song_id) }}" enctype="multipart/form-data" class="stack">{{ token() }}<div class="form-grid"><label>原文 LRC<input type="file" name="lyrics" accept=".lrc"></label><label>中文翻译 LRC<input type="file" name="translation" accept=".lrc"></label></div><button>保存歌词</button><span class="form-status muted" role="status"></span></form>{% if s.has_lyrics %}<form method="post" action="{{ url_for('catalog.remove_lyrics',sid=s.song_id) }}" class="remove-audio" data-confirm="只移除歌词，音频和歌曲资料将保留。确定继续？">{{ token() }}<button class="text danger">移除歌词</button></form>{% endif %}</details>
+{% if s.has_audio %}<form method="post" class="remove-audio" action="{{ url_for('catalog.remove_audio',sid=s.song_id) }}" data-confirm="移除音频后将无法播放，歌曲资料和歌单关系仍会保留。确定继续？">{{ token() }}<button class="text danger">移除音频</button></form>{% endif %}</section>{% else %}<div class="empty">没有符合条件的歌曲。</div>{% endfor %}</div>
+{% endblock %}

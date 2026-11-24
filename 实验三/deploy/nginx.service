@@ -1,0 +1,13 @@
+[Unit]
+Description=Tongpin nginx reverse proxy
+After=network.target music-platform.service
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStartPre=/opt/music-platform/nginx/sbin/nginx -t
+ExecStart=/opt/music-platform/nginx/sbin/nginx
+ExecReload=/opt/music-platform/nginx/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
